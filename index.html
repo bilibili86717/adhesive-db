@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>粘接剂数据库</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="icons/icon.svg">
+</head>
+<body>
+  <div id="app">
+    <header class="header">
+      <div class="header-inner">
+        <a href="#" class="logo">粘接剂数据库</a>
+        <div class="search-box">
+          <input type="text" id="search-input" placeholder="搜索产品、型号、品牌..." autocomplete="off">
+          <button id="search-btn">搜索</button>
+        </div>
+        <div class="header-stats">
+          <span id="total-products">0</span> 产品 · <span id="total-reports">0</span> 报告
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <aside class="sidebar">
+        <h3>分类</h3>
+        <nav id="category-nav">
+          <a href="#" class="active" data-cat="all">全部</a>
+        </nav>
+      </aside>
+
+      <main class="main" id="main-content">
+        <!-- 动态内容 -->
+      </main>
+    </div>
+  </div>
+
+  <!-- PDF 预览弹窗 -->
+  <div id="pdf-modal" class="modal">
+    <div class="modal-overlay"></div>
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modal-title">报告预览</h3>
+        <div class="modal-actions">
+          <a id="modal-download" href="#" download>下载</a>
+          <button id="modal-close">关闭</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <iframe id="pdf-frame" src="" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="data/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
